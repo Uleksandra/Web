@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Danya</title>
+  <style>
+    .slider {
+      width: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .slide {
+      width: 100%;
+      height: 200px;
+      flex-shrink: 0;
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <div class="slides">
+      <div class="slide" style="background-image: url('путь_к_изображению_1.jpg');"></div>
+      <div class="slide" style="background-image: url('путь_к_изображению_2.jpg');"></div>
+      <div class="slide" style="background-image: url('путь_к_изображению_3.jpg');"></div>
+    </div>
+  </div>
+
+  <button id="prevBtn">Prev</button>
+  <button id="nextBtn">Next</button>
+
+  <script>
+    const slider = document.querySelector(".slider");
+    const slides = document.querySelector(".slides");
+    const slideWidth = slider.clientWidth;
+
+    let currentSlide = 0;
+
+    function goToSlide(slideIndex) {
+      if (slideIndex < 0 || slideIndex >= slides.children.length) return;
+      currentSlide = slideIndex;
+      slides.style.transform = `translateX(-${slideWidth * currentSlide}px)`;
+    }
+
+    function nextSlide() {
+      goToSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      goToSlide(currentSlide - 1);
+    }
+
+    document.querySelector("#nextBtn").addEventListener("click", nextSlide);
+    document.querySelector("#prevBtn").addEventListener("click", prevSlide);
+  </script>
+</body>
+</html>

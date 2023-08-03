@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="look.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Slider</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    padding: 10px 30px 8px;
+    background-color:blueviolet;
+}
+.header-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: white;
+}
+.top-left h2 {
+    margin-bottom: 10px;
+}
+
+.top-left div i {
+    margin-right: 10px;
+    font-size: 28px;
+}
+
+.top-left div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.top-left div:last-child {
+    margin-bottom: 0px;
+}
+
+.top-right {
+    display: flex;
+    align-items: flex-start;
+}
+
+.top-right button {
+    background-color: transparent;
+    border: none;
+    margin-left: 20px;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.top-right button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.content {
+    width: 100%;
+}
+
+.info-block .main-info img {
+    /* margin-top: 20px;; */
+    width: 250px;
+    height: auto;
+
+}
+
+.info-block {
+    padding: 20px 30px;
+}
+
+.info-block .main-info {
+    display: flex;
+}
+
+.info-block .main-info div {
+    width: 70%;
+    margin-left: 50px;
+}
+
+.info-block h2 {
+    color: blueviolet;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.info-block .boxes,
+.info-block .recomends-box{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.info-block .boxes .box, 
+.info-block .recomends-box .box {
+    border: 1px solid blueviolet;
+    box-shadow: 0 0 50px -20px blueviolet;
+    border-radius: 5px;
+    width: 150px;
+    height: 150px;
+    margin-right: 100px;
+    /* margin-bottom: 25px; */
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.info-block .boxes .box i {
+    font-size: 45px;
+    color: purple;
+}
+
+.info-block .boxes .box h3 {
+    font-size: 18px;
+    color: rgb(39, 38, 40);
+}
+
+.info-block .project {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.info-block .project ul li {
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    
+}
+
+.info-block .project ul::after {
+    content: '';
+    width: 80%;
+    height: 0.5px;
+    margin: 0 auto;
+    background-color: black;
+    display: block;
+}
+.info-block .project ul:last-child::after {
+    display: none;
+}
+.info-block .recomends-box .box {
+    margin: 0;
+    width: 30%;
+    height: auto;
+    padding: 10px 20px;
+}
+
+.info-block .recomends-box {
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="top-left">
+                <h2>Jane Doe</h2>
+                <div><i class='bx bxl-gmail' ></i> Uleksandra@gmail.com</div>
+                <div><i class='bx bxs-phone'></i> +380991231212</div>
+            </div>
+            <div class="top-right">
+                <button>About me</button>
+                <button>Resume</button>
+                <button>Danya Krutoy</button>
+                <button>Boba</button>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="info-block">
+            <div class="main-info">
+                <img src="https://cdns-images.dzcdn.net/images/artist/665fcb54faa7d488b589cf0b5a260082/500x500.jpg" alt="me">
+                <div>
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2><!--/lorem-->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, nobis. Sapiente deleniti sunt expedita exercitationem, ducimus impedit eos iusto beatae quia laudantium excepturi nisi amet commodi tempore? Aut, saepe vitae.</p>
+                </div>
+            </div>
+        </div>
+        <div class="info-block">
+            <h2>Skills</h2>
+            <div class="boxes">
+                <div class="box">
+                    <i class='bx bxl-html5'></i>
+                    <h3>HTML</h3>
+                    <p>text</p>
+                </div>
+                <div class="box">
+                    <i class='bx bxl-css3' ></i>                    
+                    <h3>CSS</h3>
+                    <p>text</p>
+                </div>
+                <div class="box">
+                    <i class='bx bxl-nodejs' ></i>                    
+                    <h3>JS</h3>
+                    <p>text</p>
+                </div>
+                <div class="box">
+                    <i class='bx bxl-c-plus-plus'></i>                    
+                    <h3>C++</h3>
+                    <p>text</p>
+                </div>
+                <div class="box">
+                    <i class='bx bxl-python' ></i>
+                    <h3>PYTHON</h3>
+                    <p>text</p>
+                </div>
+                <div class="box">
+                    <i class='bx bxl-facebook-square' ></i>                    
+                    <h3>FACEBOOK</h3>
+                    <p>text</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="info-block">
+            <h2>Projects</h2>
+            <div class="project">
+                <ul>
+                    <h4>Chatbox</h4>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dignissimos totam, eos reprehenderit aut ad suscipit magni. Atque, aut ducimus cumque autem aliquid eius quod animi deleniti impedit, repellendus ipsam.</li>
+                </ul>
+                <ul>
+                    <h4>Second</h4>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dicta saepe ut nihil consequuntur eaque, nesciunt veritatis? Cum ut itaque eveniet repellendus facilis, dolorum quam esse eligendi eaque blanditiis ab.</li>
+                </ul>
+                <ul>
+                    <h4>Third</h4>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium doloribus quis fuga, laudantium eius quibusdam quae voluptates necessitatibus aliquam dolorum, sed voluptatum, sapiente impedit hic iste porro ut quam veritatis!</li>
+                </ul>
+            </div>
+        </div>
+        <div class="info-block">
+            <h2>Recomendations</h2>
+            <div class="recomends-box">
+                <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rerum hic nisi perspiciatis similique, quia id maxime quis voluptate delectus doloremque! Corporis at labore voluptatem atque quo, minus vitae provident!</div>
+                <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rerum hic nisi perspiciatis similique, quia id maxime quis voluptate delectus doloremque! Corporis at labore voluptatem atque quo, minus vitae provident!</div>
+                <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rerum hic nisi perspiciatis similique, quia id maxime quis voluptate delectus doloremque! Corporis at labore voluptatem atque quo, minus vitae provident!</div>
+            </div>
+        </div>
+    </div>
+    <script src="3.js"></script>
+</body>
+</html>
